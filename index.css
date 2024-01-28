@@ -44,6 +44,10 @@
     cursor: pointer;
 }
 
+.search {
+    margin: 10px;
+}
+
 .filter-btn:hover {
     cursor: pointer;
 }
