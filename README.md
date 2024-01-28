@@ -17,14 +17,20 @@ Web App using react
 
 - Normal utility js functiona given by react
 - **useState()** : Give variable that maintains state inside react component
-  - Definition syntax: const [variable_name, setFunction] = useState(defaultValue);
+  - Definition syntax:
+
+     ```javascript
+     const [variable_name, setFunction] = useState(defaultValue);
+     ```
+
   - useState() returns an array with 2 elements, 0-> variable and 1-> set function.
   - Other way to define:
 
-    ````javascript
+    ```javascript
     const arr = useState([]);
     const variable_name = arr[0];
     const setFunction = arr[1];
+    ```
 
   - setFunction name can be anything but cunvention is to use java type setter.
   - can't modify the variable directly.
@@ -33,5 +39,6 @@ Web App using react
   - It is called immediately after the component is rendered.
   - Syntax:
 
-    ````javascript
+    ```javascript
     useEffect(() => {console.log();}, [arg1, arg2]);
+    ```
