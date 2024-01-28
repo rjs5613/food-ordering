@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { Shimmer } from "./Shimmer";
 
 const Body = () => {
-  //state variable
   const [listofRestaurant, setListOfRestaurant] = useState([]); //State Variable
   const [filteredRestaurant, setFilteredRestaurant] = useState([]); //State Variable
   const [searchText, setSearchText] = useState("Search Me");
@@ -44,17 +43,14 @@ const Body = () => {
           <button
             className="search-btn"
             onClick={() => {
-              console.log(searchText);
               if (searchText.length === 0) {
                 setFilteredRestaurant(listofRestaurant);
               }
               const filterResult = listofRestaurant.filter((res) => {
-                console.log(res?.info?.name);
                 return res?.info?.name
                   .toLowerCase()
                   .includes(searchText.toLowerCase());
               });
-              console.log(filterResult);
               setFilteredRestaurant(filterResult);
             }}
           >
