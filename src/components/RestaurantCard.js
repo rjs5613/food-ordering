@@ -1,6 +1,6 @@
 import { CDN_URL } from "../utils/constants";
 
-const RestrauntCard = ({ restData }) => {
+const RestrauntCard = ({ restData, isCompact }) => {
   const {
     name,
     costForTwo,
@@ -9,6 +9,21 @@ const RestrauntCard = ({ restData }) => {
     sla,
     cloudinaryImageId,
   } = restData?.info; //js distructuring
+
+  if (isCompact) {
+    return (
+      <div className="top-res-card">
+        <img
+          className="top-res-logo"
+          alt="res-logo"
+          src={CDN_URL + cloudinaryImageId}
+        />
+        <h3>{name}</h3>
+        <h4>{costForTwo}</h4>
+        <h4>{sla?.deliveryTime} Minutes</h4>
+      </div>
+    );
+  }
 
   return (
     <div className="res-card">
