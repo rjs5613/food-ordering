@@ -41,4 +41,4 @@ const RestrauntCard = ({ restData, isCompact }) => {
   );
 };
 
-export { RestrauntCard };
+export default RestrauntCard;

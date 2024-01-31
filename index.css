@@ -46,8 +46,16 @@
   overflow-x: auto;
 }
 
-.cuisine-section {
+.cuisine-card {
   margin: 10px;
+}
+
+.cuisine-shimmer-card {
+  width: 120px;
+  height: 120px;
+  margin: 44px 10px 40px 10px;
+  border-radius: 50%;
+  background-color: #f6f7f8;
 }
 
 .cuisine-logo {
@@ -71,12 +79,6 @@
   display: block;
 }
 
-.res-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-shrink: 0;
-}
-
 .top-res-container {
   display: flex;
   overflow-x: auto; /* Add overflow-y for vertical scrolling */
@@ -85,7 +87,16 @@
 
 .top-res-card {
   min-width: 250px;
-  height: 350px;
+  background-color: #f6f7f8;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 10px;
+  flex-grow: 1;
+}
+
+.top-res-shimmer-card {
+  min-width: 250px;
+  height: 480px;
   background-color: #f6f7f8;
   padding: 5px;
   border-radius: 15px;
@@ -95,12 +106,33 @@
 
 .top-res-logo {
   width: 100%;
-  height: 60%;
+  height: 50%;
   border-radius: 10px;
+}
+
+.top-res-card:hover {
+  cursor: pointer;
+  transform: scale(0.98);
+}
+
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .res-card {
   width: 250px;
+  box-sizing: content-box;
+  background-color: #f6f7f8;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.res-shimmer-card {
+  width: 250px;
+  height: 450px;
   box-sizing: content-box;
   background-color: #f6f7f8;
   padding: 5px;
@@ -132,4 +164,13 @@
   border: 1px solid rgb(226, 226, 231);
   border-radius: 18px;
   padding: 10px;
+}
+
+hr {
+  color: #f6f7f8;
+}
+
+.body {
+  margin-left: 120px;
+  margin-right: 120px;
 }
